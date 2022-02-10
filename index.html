@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Quiz</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- if you need menu for next task -->
+    <header>
+        <nav>
+            <ul class="title"><strong style="color: rgb(89, 214, 6);">q</strong>u <strong style="color:rgb(5, 5, 196);">i</strong>z</ul>
+            <ul>
+                <li><a href="" class="btn-menu" id="btn-quiz">Start Quiz</a></li>
+                <li><a href="" class="btn-menu" id="btn-edit">Edit Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="pictures">
+        <div class="picture">
+            <img src="image/img1.jpg" alt="" >
+            <div class="text">This is a quiz about past simple tense,so you can click menu<span> Start quiz</span>,you can do execise and <span> Edit quiz</span> you can edit  your questions.</div> 
+        </div>
+    </section>
+    <!-- display question for role teacher only -->
+    <section id="edit-question">
+        <!-- I need on form here -->
+        <div id="form-add-question">
+            <!-- TODO -->
+            <form action="">
+                <ul class="title">
+                    <input type="text" id="title_text" placeholder="Title..."><br />
+                    <hr />
+                    <input type="text" id="description_text" placeholder="Description"><br />
+                </ul>
+                <ul class="enter-question">
+                    <input type="text" id="getQuestion" placeholder="Question"><br />
+                    <div class="d-flex">
+                        <input type="radio" name="answer-input"><label for=""><input name="answer" id="getChoice1" type="text" placeholder="Enter answer"></label><br>
+                        <input type="radio" name="answer-input"><label for=""><input name="answer" id="getChoice2"  type="text" placeholder="Enter answer"></label><br>
+                        <input type="radio" name="answer-input"><label for=""><input name="answer" id="getChoice3"  type="text" placeholder="Enter answer"></label><br>
+                        <input type="radio" name="answer-input"><label for=""><input name="answer" id="getChoice4"  type="text" placeholder="Enter answer"></label><br>
+                    </div>
+                    <hr />
+                    <button id="add-question" class="color-blue">+ Add</button>
+                </ul>
+            </form>
+        </div>
+        <!-- I need all the questions display here -->
+        <div id="display-qustions">
+            <!-- TODO -->
+        </div>
+    </section>
+    <section id="do-quiz"  class="mt">
+        <div class="container">
+            <div class="enter-question" >
+                <h3 class="total">Total: <span id="totalScore">0</span> /10</h2>
+                <h2 class="quiz-title">Quiz</h2>
+                <hr/>
+                <p class="quiz-title">Past simple tense</p>
+            </div>
+            <div class="input-radio p">
+                <div class="passage " >
+                    <li>1. Positive form of past simple.</li>
+                    <input type="radio" name="answer1" ><label class="false" for=""> S + V1(base form) + Obj</label><br />
+                    <input type="radio" name="answer1" ><label class="true"  for=""> S + V2(base form) + Obj</label><br />
+                    <input type="radio" name="answer1" ><label class="false" for=""> S + V2(base form) + Obj</label><br />
+                    <input type="radio" name="answer1" ><label  class="false" for=""> S + Ving + Obj</label><br />
+                    <hr>
+                    <div id="correct1"></div>
+                </div>
+            </div>
+            <div class="input-radio p">
+                <div class="passage">
+                    <li>2. I _____ to the mall after school.</li>
+                    <input type="radio" name="answer2" ><label for="">  goed</label><br />
+                    <input type="radio" name="answer2" ><label for=""> gone</label><br />
+                    <input type="radio" name="answer2" ><label for=""> went</label><br />
+                    <input type="radio" name="answer2" ><label for=""> wented</label><br />
+                    <hr>
+                    <div id="correct2"></div>
+                </div>
+            </div>
+            <div class="input-radio p">
+                <div class="passage">
+                    <li>3. Sorry, I ________ hear you at the door. </li>
+                    <input type="radio" name="answer3" ><label for=""> wasn't</label><br />
+                    <input type="radio" name="answer3" ><label for=""> didn't</label><br />
+                    <input type="radio" name="answer3" ><label for=""> am not</label><br />
+                    <input type="radio" name="answer3" ><label for=""> had not</label><br />
+                    <hr>
+                    <div id="correct3"></div>
+                </div>
+            </div>
+            <div class="input-radio p">
+                <div class="passage">
+                    <li>4. What _____ you eat for lunch yesterday?</li>
+                    <input type="radio" name="answer4" ><label for=""> do</label><br />
+                    <input type="radio" name="answer4" ><label for=""> did</label><br />
+                    <input type="radio" name="answer4" ><label for=""> were</label><br />
+                    <input type="radio" name="answer4" ><label for=""> had</label><br />
+                    <hr>
+                    <div id="correct4"></div>
+                </div>
+            </div>
+            <div class="input-radio p">
+                <div class="passage">
+                    <li>5. _____ Mike visit his grandmother last night?</li>
+                    <input type="radio" name="answer5" ><label for=""> Do</label><br />
+                    <input type="radio" name="answer5" ><label for=""> Is</label><br />
+                    <input type="radio" name="answer5" ><label for=""> Did</label><br />
+                    <input type="radio" name="answer5" ><label for=""> Had</label><br />
+                    <hr>
+                    <div id="correct5"></div>
+                </div>
+            </div>
+            <div class="input-radio p">
+                <div class="passage">
+                    <li>6. Alex did not _____ last weekend.</li>
+                    <input type="radio" name="answer6" ><label for=""> working</label><br />
+                    <input type="radio" name="answer6" ><label for=""> worked</label><br />
+                    <input type="radio" name="answer6" ><label for=""> work</label><br />
+                    <input type="radio" name="answer6" ><label for=""> workeding</label><br />
+                    <hr>
+                    <div id="correct6"></div>
+                </div>
+            </div>
+            <div class="input-radio p">
+                <div class="passage">
+                    <li>7. How do we use the past simple?</li>
+                    <input type="radio" name="answer7" ><label for="">  happened and finished in the past </label><br />
+                    <input type="radio" name="answer7" ><label for="">  Habits</label><br />
+                    <input type="radio" name="answer7" ><label for="">  actions began in the past</label><br />
+                    <input type="radio" name="answe7r" ><label for="">  habits or repeated actions.</label><br />
+                    <hr>
+                    <div id="correct7"></div>
+                </div>
+            </div>
+            <div class="input-radio p">
+                <div class="passage">
+                    <li>8.past simple of question:</li>
+                    <input type="radio" name="answer8" ><label for="">  Did +S +  V2(base form)  + Obj +?</label><br />
+                    <input type="radio" name="answer8" ><label for="">  Was /were +V2(base form)  + Obj +?</label><br />
+                    <input type="radio" name="answer8" ><label for="">  Did + S + V1(base form) +Obj? </label><br />
+                    <input type="radio" name="answer8" ><label for="">  Do/Dose + S + V1(base form) +Obj? </label><br />
+                    <hr>
+                    <div id="correct8"></div>
+                </div>
+            </div>
+            <div class="input-radio p">
+                <div class="passage">
+                    <li>9.Negative of past simple:</li>
+                    <input type="radio" name="answer9" ><label for="">  S + did + not + V2(base form) + Obj</label><br />
+                    <input type="radio" name="answer9" ><label for="">  S + to be + not + V1(base form) + Obj</label><br />
+                    <input type="radio" name="answer9" ><label for="">  S + was/were + not + V2(base form) + Obj</label><br />
+                    <input type="radio" name="answer9" ><label for="">  S + did + not + V1(base form) + Obj</label><br />
+                    <hr>
+                    <div id="correct9"></div>
+                </div>
+    
+            </div>
+            <div class="input-radio p">
+                <div class="passage">
+                    <li>10.She_____her homework at 10 o'clock.</li>
+                    <input type="radio" name="answer10" ><label for="">finished</label><br />
+                    <input type="radio" name="answer10" ><label for="">finish</label><br />
+                    <input type="radio" name="answer10" ><label for="">finishedd</label><br />
+                    <input type="radio" name="answer10" ><label for="">finisheed</label><br />
+                    <hr>
+                    <div id="correct10"></div>
+                </div>
+    
+            </div>
+        </div>
+        <div class="create-Button-Submit">
+            <button class="button_Submit" id="submit-quiz">Submit</button>
+        </div>
+    </section>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
